@@ -5,7 +5,7 @@ class Word
 	attr_accessor :definitions, :name, :id
 
 	define_method(:initialize) do | attributes |
-		@name = attributes.fetch :name
+		@name = attributes.fetch(:name).capitalize!
     @definitions = attributes.fetch :definitions, []
     @id = @@words.length + 1
 	end

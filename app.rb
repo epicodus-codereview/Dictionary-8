@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require './lib/word'
 require './lib/definition'
+also_reload('./lib/**/*.rb')
+
 
 get('/') do
   @words = Word.all
@@ -28,4 +30,18 @@ get('/word/:id') do
   id = params.fetch('id').to_i
   @word = Word.find(id)
   erb :word
+end
+
+get('/add_definition/:id') do
+  id = params.fetch('id').to_i
+  @word = Word.find(id)
+  erb :add_definition
+end
+
+post('/word/:id') do
+  id = params.fetch('id').to_i
+  @word = Word.find(id)
+  statement = params.fetch('definition')
+  definition = Definition.new(statement)
+  @word.add_definition(definition)
 end

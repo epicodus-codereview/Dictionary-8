@@ -10,8 +10,8 @@ describe Word do
   end
 
   describe '#name' do
-    it 'returns the name of the Word object' do
-      expect(@test_word.name).to eq 'word'
+    it 'returns the name of the Word object capitalized' do
+      expect(@test_word.name).to eq 'Word'
     end
   end
 
