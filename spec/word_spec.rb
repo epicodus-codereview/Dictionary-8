@@ -34,4 +34,12 @@ describe Word do
     end
   end
 
+  describe '.all' do
+    it 'clears the @@words array of all Word objects' do
+      @test_word.save
+      Word.clear
+      expect(Word.all).to eq []
+    end
+  end
+
 end
