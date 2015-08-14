@@ -1,5 +1,6 @@
 require 'capybara/rspec'
 require './app'
+require 'launchy'
 Capybara.app = Sinatra::Application
 
 describe('when using the dictionary site', { :type => :feature }) do
@@ -12,7 +13,7 @@ end
 before do
   visit '/add_word'
   fill_in 'word_name', with: 'Taco'
-  fill_in 'definition1', with: 'my lunch'
+  fill_in 'definition', with: 'my lunch'
   click_button 'Add'
 end
 
@@ -25,10 +26,6 @@ end
 
 describe('when viewing a word entry', { :type => :feature }) do
   it('shows a page containing the word and it\'s definitions') do
-    # visit '/add_word'
-    # fill_in 'word_name', with: 'Taco'
-    # fill_in 'definition1', with: 'my lunch'
-    # click_button 'Add'
     visit '/word/1'
     expect(page).to have_content('Taco')
     expect(page).to have_content('my lunch')
@@ -37,11 +34,9 @@ end
 
 describe('when adding a definition', { :type => :feature }) do
   it('adds the definition to the word page') do
-    visit '/word/1'
-    click_button 'Add Definition'
+    visit '/add_definition/1'
     fill_in 'definition', with: "also very delicious"
     click_button 'Add'
-    expect(page).to have_content('Taco')
-    expect(page).to have_content('also very delicious')
+    expect(page).to have_content("also very delicious")
   end
 end
