@@ -1,38 +1,38 @@
 My Dictionary
-A Sinatra/Ruby excercise for Epicodus, 08.14.2015
+A Sinatra/Ruby exercise for Epicodus, 08.14.2015
 
 By Ryan Broughan
 Description
 
-This app allows the user to add words and definitions
+This app allows the user to add words and definitions to those words
 
 Setup
 
 Easy Way:
 
-Visit: https://aqueous-fortress-7331.herokuapp.com/
+-Visit: https://aqueous-fortress-7331.herokuapp.com/
 
-Enjoy!
+-Enjoy!
 
 Hard Way:
 
-Clone this repository,
+- Clone this repository
 
-Open up terminal and navigate to the project directory
+- Open up terminal and navigate to the project directory
 
-Run Bundler (type 'bundle')
+- Run Bundler (type 'bundle')
 
-Run the App (type 'ruby app.rb')
+- Run the App (type 'ruby app.rb')
 
-Then open your web browser of choice to localhost:4567
+- Then open your web browser of choice to localhost:4567
 
 Technologies Used
 
-Ruby
+- Ruby
 
-Sinatra
+- Sinatra
 
-Bootstrap
+- Bootstrap
 
 Legal
 

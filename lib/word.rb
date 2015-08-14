@@ -2,7 +2,7 @@ class Word
 
   @@words = []
 
-	attr_accessor :definitions, :name, :id
+	attr_reader :definitions, :name, :id
 
 	define_method(:initialize) do | attributes |
 		@name = attributes.fetch(:name).capitalize!
@@ -33,16 +33,6 @@ class Word
       end
     end
     nil
-  end
-
-  define_singleton_method(:sort_words) do
-    if @@words.length > 1
-      @@words.sort! do | word1, word2 |
-        word1.name.downcase <=> word2.name.downcase
-      end
-    else
-      @@words
-    end
   end
 
 end

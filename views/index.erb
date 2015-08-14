@@ -2,17 +2,22 @@
 <div class="row text-center">
   <h3>My Dictionary</h3>
 
-
-<table class="table table-hover">
-  <tr id="first-row">
-    <th width="90%">Word</th>
-    <td width="10%" id='add_word'>
-      <a href="/add_word" class="btn btn-primary btn-sm">+</a>
-    </td>
-  </tr>
-  <% @words.each do | word | %>
-    <tr><td width="100%" class="text-left"><a href="/word/<%= word.id %>"><%= word.name %></a></td></tr>
-  <% end %>
-</table>
+  <table class="table table-hover">
+    <tr id="first-row">
+      <th width="90%">Word</th>
+      <td width="10%" id='add_word'>
+        <a href="/add_word" class="btn btn-primary btn-sm">+</a>
+      </td>
+    </tr>
+    <% @words.each do | word | %>
+      <tr>
+        <td width="100%" class="text-left">
+          <a href="/word/<%= word.id %>">
+            <%= word.name %>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 
 </div>

@@ -37,5 +37,4 @@ describe('when adding a definition', { :type => :feature }) do
     visit '/add_definition/1'
     expect(page).to have_content("Add New Definition")
   end
-
 end

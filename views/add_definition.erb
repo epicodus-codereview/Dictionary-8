@@ -4,14 +4,14 @@
 
   <form class="form-horizontal" action="/word/<%= params.fetch('id').to_i %>" method="post">
 
-    <h4></h4>
     <h4 class="row text-center">Add New Definition</h4>
+
     <div class="form-group inline-form">
       <label for="definition" class="text-muted">Definition</label>
       <input type="text" name="definition" class="form-control">
-
     </div>
 
     <button class="btn btn-primary" type="submit">Add</button>
     <a class="btn btn-warning" href="/word/<%= params.fetch('id').to_i %>">Back</a>
+    
   </form>
