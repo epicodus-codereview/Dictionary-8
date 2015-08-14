@@ -5,7 +5,7 @@ class Word
 	attr_reader :definitions, :name, :id
 
 	define_method(:initialize) do | attributes |
-		@name = attributes.fetch(:name).capitalize! ||attributes.fetch(:name)
+		@name = attributes.fetch(:name).capitalize! || attributes.fetch(:name)
     @definitions = attributes.fetch :definitions, []
     @id = @@words.length + 1
 	end
