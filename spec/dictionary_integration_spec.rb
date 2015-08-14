@@ -33,10 +33,9 @@ describe('when viewing a word entry', { :type => :feature }) do
 end
 
 describe('when adding a definition', { :type => :feature }) do
-  it('adds the definition to the word page') do
+  it('shows a form to add a new definition') do
     visit '/add_definition/1'
-    fill_in 'definition', with: "also very delicious"
-    click_button 'Add'
-    expect(page).to have_content("also very delicious")
+    expect(page).to have_content("Add New Definition")
   end
+
 end
