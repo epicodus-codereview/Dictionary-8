@@ -1,6 +1,9 @@
 class Definition
-	define_method(:initialize) do 
 
+	attr_reader :statement
+	
+	define_method(:initialize) do | statement |
+		@statement = statement
 	end
-		
+
 end
