@@ -1,0 +1,18 @@
+
+<div class="row text-center">
+  <h3>My Dictionary</h3>
+
+
+<table class="table table-hover">
+  <tr id="first-row">
+    <th width="90%">Name</th>
+    <td width="10%" id='add_contact'>
+      <a href="/add_contact" class="btn btn-primary btn-sm">+</a>
+    </td>
+  </tr>
+  <% @words.each do | word | %>
+    <tr><td width="100%"><a href=""><%= word.name %></a></td></tr>
+  <% end %>
+</table>
+
+</div>
