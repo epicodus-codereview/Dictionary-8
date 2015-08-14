@@ -20,9 +20,17 @@ describe Word do
     end
   end
 
+
   describe '.all' do
     it 'returns an array of all Word objects (empty by default)' do
       expect(Word.all).to eq []
+    end
+  end
+
+  describe '#save' do
+    it 'saves a Word in the @@words array' do
+      @test_word.save
+      expect(Word.all).to eq [@test_word]
     end
   end
 

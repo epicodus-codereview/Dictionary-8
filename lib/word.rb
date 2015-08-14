@@ -9,6 +9,11 @@ class Word
     @definitions = attributes.fetch :definitions, []
 	end
 
+  define_method(:save) do
+    @@words.push(self)
+  end
+
+
   define_singleton_method(:all) do
     @@words
   end
