@@ -10,7 +10,7 @@ Setup
 
 Easy Way:
 
-Visit:
+Visit: https://aqueous-fortress-7331.herokuapp.com/
 
 Enjoy!
 
