@@ -5,6 +5,7 @@ require 'definition'
 describe Word do
   before do
     @test_word = Word.new({name: 'word'})
+
     @test_definition1 = Definition.new('the meaning of a word')
   end
 
@@ -40,11 +41,19 @@ describe Word do
     end
   end
 
-  describe '.all' do
+  describe '.clear' do
     it 'clears the @@words array of all Word objects' do
       @test_word.save
       Word.clear
       expect(Word.all).to eq []
+    end
+  end
+
+  describe '#id' do
+    it 'returns a unique id of a word based on the length of @@words' do
+      @test_word.save
+      @test_word2 = Word.new({name: 'word2'})
+      expect(@test_word2.id).to eq 2
     end
   end
 

@@ -2,11 +2,12 @@ class Word
 
   @@words = []
 
-	attr_accessor :definitions, :name
+	attr_accessor :definitions, :name, :id
 
 	define_method(:initialize) do | attributes |
 		@name = attributes.fetch :name
     @definitions = attributes.fetch :definitions, []
+    @id = @@words.length + 1
 	end
 
   define_method(:save) do
