@@ -14,4 +14,10 @@ describe Word do
     end
   end
 
+  describe '#name' do
+    it 'returns the name of the Word object' do
+      expect(@test_word.name).to eq 'word'
+    end
+  end
+
 end
