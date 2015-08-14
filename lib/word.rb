@@ -13,6 +13,10 @@ class Word
     @@words.push(self)
   end
 
+  define_method(:add_definition) do | definition |
+    @definitions.push(definition)
+  end
+
   define_singleton_method(:clear) do
     @@words = []
   end
