@@ -19,7 +19,7 @@ post('/') do
   @words = Word.all
 
   word_name = params.fetch('word_name')
-  statement = params.fetch('definition')
+  statement = params.fetch('definition1')
   definition = Definition.new(statement)
   word = Word.new({name: word_name, definitions: [definition]})
   word.save
