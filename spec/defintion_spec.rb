@@ -1,5 +1,5 @@
 require 'rspec'
-require 'defintion'
+require 'definition'
 
 describe Definition do
 
