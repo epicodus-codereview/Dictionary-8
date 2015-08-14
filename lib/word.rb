@@ -35,4 +35,14 @@ class Word
     nil
   end
 
+  define_singleton_method(:sort_words) do
+    if @@words.length > 1
+      @@words.sort! do | word1, word2 |
+        word1.name.downcase <=> word2.name.downcase
+      end
+    else
+      @@words
+    end
+  end
+
 end

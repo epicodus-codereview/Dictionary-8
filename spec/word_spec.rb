@@ -66,4 +66,14 @@ describe Word do
     end
   end
 
+  describe '.sort' do
+    it 'sorts the @@words array into alphabetical order' do
+      @test_word.save
+      @test_word2 = Word.new({name: 'a'})
+      @test_word2.save
+      Word.sort_words
+      expect(Word.all).to eq [@test_word2, @test_word]
+    end
+  end
+
 end
