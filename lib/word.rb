@@ -26,4 +26,13 @@ class Word
     @@words
   end
 
+  define_singleton_method(:find) do | number |
+    @@words.each do | word |
+      if word.id == number
+        return word
+      end
+    end
+    nil
+  end
+
 end

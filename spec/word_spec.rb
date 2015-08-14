@@ -4,8 +4,8 @@ require 'definition'
 
 describe Word do
   before do
+    Word.clear
     @test_word = Word.new({name: 'word'})
-
     @test_definition1 = Definition.new('the meaning of a word')
   end
 
@@ -54,6 +54,15 @@ describe Word do
       @test_word.save
       @test_word2 = Word.new({name: 'word2'})
       expect(@test_word2.id).to eq 2
+    end
+  end
+
+  describe '.find' do
+    it 'retrieves a Word from @@words based on it\'s id' do
+      @test_word.save
+      @test_word2 = Word.new({name: 'word2'})
+      @test_word2.save
+      expect(Word.find(1)).to eq @test_word
     end
   end
 
