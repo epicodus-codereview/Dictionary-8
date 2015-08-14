@@ -6,12 +6,12 @@
 <table class="table table-hover">
   <tr id="first-row">
     <th width="90%">Name</th>
-    <td width="10%" id='add_contact'>
-      <a href="/add_contact" class="btn btn-primary btn-sm">+</a>
+    <td width="10%" id='add_word'>
+      <a href="/add_word" class="btn btn-primary btn-sm">+</a>
     </td>
   </tr>
   <% @words.each do | word | %>
-    <tr><td width="100%"><a href=""><%= word.name %></a></td></tr>
+    <tr><td width="100%"><a href="/word/<%= word.id %>"><%= word.name %></a></td></tr>
   <% end %>
 </table>
 
