@@ -44,4 +44,5 @@ post('/word/:id') do
   statement = params.fetch('definition')
   definition = Definition.new(statement)
   @word.add_definition(definition)
+  erb :word
 end
