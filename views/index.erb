@@ -11,7 +11,7 @@
     </td>
   </tr>
   <% @words.each do | word | %>
-    <tr><td width="100%"><a href="/word/<%= word.id %>"><%= word.name %></a></td></tr>
+    <tr><td width="100%" class="text-left"><a href="/word/<%= word.id %>"><%= word.name %></a></td></tr>
   <% end %>
 </table>
 

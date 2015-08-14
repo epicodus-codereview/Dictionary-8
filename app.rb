@@ -17,8 +17,15 @@ post('/') do
   @words = Word.all
 
   word_name = params.fetch('word_name')
-  definition1 = params.fetch('definition1')
-  word = Word.new({name: word_name, definitions: [definition1]})
+  statement = params.fetch('definition1')
+  definition = Definition.new(statement)
+  word = Word.new({name: word_name, definitions: [definition]})
   word.save
   erb :index
+end
+
+get('/word/:id') do
+  id = params.fetch('id').to_i
+  @word = Word.find(id)
+  erb :word
 end
