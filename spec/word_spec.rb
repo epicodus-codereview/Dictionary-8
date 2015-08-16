@@ -21,8 +21,9 @@ describe Word do
     end
   end
 
-  describe '#definitions' do
-    it 'returns an array of definitions of a Word object (empty by default)' do
+  # update this spec to be clear this is testing #add_definition() - you already tested #definitions()
+  describe '#add_definition' do
+    it 'adds a definition object to a word object' do
       @test_word.add_definition(@test_definition1)
       expect(@test_word.definitions).to eq [@test_definition1]
     end
